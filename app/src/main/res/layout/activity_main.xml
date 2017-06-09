@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <!--화면 구성
+                1) 예제 타이틀 출력 창 : TextView
+                2) 메세지 입력 창 : EditText
+                3) 메세지 전송 버튼
+
+                4) 메세지 출력 창 : EditText(또는 TextView)
+            -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="안드로이드 애뮬레이터-소켓 통신 예제"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+        <!--메세지 출력창 -->
+        <TextView
+            android:id="@+id/showMessageTv"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="15dp"
+            android:hint="[메세지 출력 창]"
+            android:text=""/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/inputMessageEt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/sendMeassageBt"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/sendMeassageBt"
+                android:ems="14"
+                android:hint="전송할 메세지를 입력하세요."/>
+
+            <Button
+                android:id="@+id/sendMeassageBt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@+id/inputMessageEt"
+                android:layout_toRightOf="@+id/inputMessageEt"
+                android:text="전송"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</ScrollView>
